@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    container_name: flask-demo
+    command: sh -c 'python3 app.py'
+    ports:
+      - 9002:80
+    volumes:
+      - .:/src
